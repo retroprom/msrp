@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+cd ${MVSRIG}
+
+export HERCULES_RC=dist/${LPAR_DIST}/conf/hercules.rc
+exec hercules -f dist/${LPAR_DIST}/conf/hercules.conf > lpar/${LPAR_NAME}/logs/hercules.log

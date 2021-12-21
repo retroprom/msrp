@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+cd ${MVSRIG}
+
+exec/term-resize 161 45
+
+exec tmux attach -t ${LPAR_TMUX}

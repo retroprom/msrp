@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+cd ${MVSRIG}
+
+LU="$1"
+
+if [ -z "$LU" ]; then
+  LU=VPRT
+fi
+
+while true; do
+  clear
+  pr3287 -reconnect "${LU}@127.0.0.1:3270" || true
+  sleep 3
+done

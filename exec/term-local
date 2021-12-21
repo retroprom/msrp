@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+LU="$1"
+
+if [ -z "$LU" ]; then
+  LU=VTAM
+fi
+
+while true; do
+  clear
+  c3270 -reconnect "${LU}@127.0.0.1:3270" || true
+  sleep 3
+done

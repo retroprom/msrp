@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+cd ${MVSRIG}
+
+CONF=dist/${LPAR_DIST}/conf/tmux.conf
+
+exec/term-resize 161 45
+
+if ! tmux has-session -t ${LPAR_TMUX}; then
+  if ! tmux source-file ${CONF}; then
+    tmux -f ${CONF} start-server
+  fi
+fi
+
+exec tmux attach -t ${LPAR_TMUX}

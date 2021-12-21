@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# defaults
+WIDTH=80
+HEIGHT=24
+
+# arguments
+if [ -n "$1" ]; then
+  WIDTH="$1"
+  if [ -n "$2" ]; then
+    HEIGHT="$2"
+  fi
+fi
+
+# execute
+printf "\e[8;${HEIGHT};${WIDTH}t"

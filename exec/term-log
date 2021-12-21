@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+cd ${MVSRIG}
+
+FILE="lpar/${LPAR_NAME}/logs/$1"
+
+while true; do
+  clear
+  tail -n 0 --follow=name --retry --verbose "${FILE}" || true
+  sleep 3
+done

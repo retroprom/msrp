@@ -1,0 +1,14 @@
+************************************************************
+* TK4 STARTUP - PREPARING IPL                              *
+************************************************************
+pause 1
+hao clear
+hao tgt IEA101A SPECIFY SYSTEM PARAMETERS
+hao cmd script dist/tk4/oper/startup-sysparm
+hao tgt MVS038J MVS 3.8j TK4- system initialization complete
+hao cmd script dist/tk4/oper/startup-done
+************************************************************
+* TK4 STARTUP - PERFORMING IPL                             *
+************************************************************
+pause 1
+ipl 148

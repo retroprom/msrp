@@ -1,0 +1,20 @@
+************************************************************
+* TK4 SHUTDOWN - PREPARING SHUTDOWN                        *
+************************************************************
+hao clear
+hao tgt HASP099
+hao cmd script dist/tk4/oper/shutdown-pjes2
+hao tgt HASP085
+hao cmd script dist/tk4/oper/shutdown-zeod
+hao tgt IEE334I
+hao cmd script dist/tk4/oper/shutdown-quiesce
+hao tgt HHC00809I
+hao cmd script dist/tk4/oper/shutdown-done
+************************************************************
+* TK4 SHUTDOWN - STANDING BY 10 SECONDS                    *
+************************************************************
+pause 10
+************************************************************
+* TK4 SHUTDOWN - INITIATING SHUTDOWN                       *
+************************************************************
+/f bsppilot,shutnow

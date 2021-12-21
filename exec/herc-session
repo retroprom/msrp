@@ -1,0 +1,50 @@
+#!/bin/bash
+
+set -e
+
+cd ${MVSRIG}
+
+clear
+echo
+
+#echo -e " ABOUT TO START HERCULES\a"
+#echo
+
+#read -p " PRESS RETURN..." || exit 1
+#echo
+
+echo -e " STARTING HERCULES"
+echo
+sleep 1
+echo -e "    IN 3\a"
+echo
+sleep 1
+echo -e "    IN 2\a"
+echo
+sleep 1 
+echo -e "    IN 1\a"
+echo
+sleep 1
+
+exec/herc-launch
+
+clear
+echo
+echo -e " HERCULES HAS TERMINATED\a"
+echo
+sleep 1
+
+echo -e " TERMINATING THE CONSOLE\a"
+echo
+sleep 1
+echo -e "    IN 3\a"
+echo
+sleep 1
+echo -e "    IN 2\a"
+echo
+sleep 1 
+echo -e "    IN 1\a"
+echo
+sleep 1
+
+tmux kill-session -t ${LPAR_TMUX}
