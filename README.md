@@ -1,2 +1,2 @@
-## MS/RP - a Hercules operating environment
+## MS/RP - LPAR with Hercules
 
