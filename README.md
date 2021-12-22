@@ -1,2 +1,2 @@
-## MS/RP hypervisor for use with Hercules
+## MS/RP - a Hercules operating environment
 
